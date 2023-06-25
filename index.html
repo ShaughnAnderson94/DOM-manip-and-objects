@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <p id="titleheading">Film title:</p>  
+<p id="title">Film name currently from the html code</p>
+<script>
+    /*--Basic code for finding and altering the text content of an html element 
+     when active  changes what the 2nd p element says*/
+//let title = document.querySelector("#title");
+//title.innerHTML = "Fantastic Mr Fox";
+
+
+ /*--another example here the style of the element is edited rather than the text
+  when active changes the dispay style of the 2nd p element */
+//let title = document.querySelector("#title");
+//title.style.display = "none";
+
+
+ /* --Here rather than changing an existing element we us js to add a new one
+  when active creates a new p element that can then be placed in the document */
+//let filmYear = document.createElement('p');
+//filmYear.id ='film year';
+//filmYear.innerHTML ='Release: 2009';
+
+//--if active places it bellow the film title(note element cant be both places)
+//let title = document.querySelector("#title");
+//title.appendChild(filmYear);
+
+//--if active places it bellow title heading (note element cant be both places)
+//let titleheading = document.querySelector("#titleheading");
+//titleheading.appendChild(filmYear);
+
+
+ /* --In case we want to remove an element it can be done like this
+  when active removes the title element */
+//let title = document.querySelector("#title");
+//title.remove();
+
+
+///////////////////////Working with objects//////////////////
+
+let movieData = { 
+    "The Darjeeling Limited": {
+      plot: "A year after their father's funeral, three brothers travel across India by train in an attempt to bond with each other.",
+      cast: ["Jason Schwartzman", "Owen Wilson", "Adrien Brody"],
+      runtime: 151,
+      rating: 7.2,
+      year: 2007,
+    },
+    "The Royal Tenenbaums": {
+      plot: "The eccentric members of a dysfunctional family reluctantly gather under the same roof for various reasons",
+      rating: 7.6,
+      year: 2001,
+      cast: ["Gene Hackman", "Gwnyeth Paltrow", "Anjelica Huston"],
+      runtime: 170,
+    },}
+/* --Here we repeat our create element code but fill it with data from an object
+  when active creates a film year element that has the year listed in the object*/
+
+//let filmYear = document.createElement('p');
+//filmYear.id ='film year';
+//filmYear.innerHTML ='release year: ' + movieData["The Darjeeling Limited"].year;
+//let title = document.querySelector("#title");
+//title.appendChild(filmYear);
+//notes when an object key contains spaces get to it using [] otherwise use .key
+
+</script>    
+</body>
+</html>
